@@ -79,5 +79,15 @@ print(respostas)
 
 respostas.sort(reverse=True) # Faz em ordem inversa
 # (e) Atribua à variável ind o índice da primeira ocorrência de ‘Y’ na lista resposta ordenada
+ind = respostas[-12]
+print(ind)
+
+ind = respostas[0]
+print(ind)
 
 # (f) Atribua à variável ind o índice da próxima ocorrência de ‘Y’ na lista resposta ordenada
+ind = respostas[-11]
+print(ind)
+
+ind = respostas[1]
+print(ind)
