@@ -49,3 +49,43 @@ print(f"{somaNotas:.2f}")
 
 # 5 Você obteve notas 90/100, 46/50, 55/60 e 66/70: 
 # Qual é a sua melhor nota nesses quatro exames?
+notas_exame = [90 / 100, 46 / 50, 55 / 60, 66 / 70]
+melhor_nota = max(notas_exame)
+porcentagem = melhor_nota * 100
+
+print(f"{porcentagem:.2f}%")
+
+# Você obteve notas 90/100, 46/50, 55/60 e 66/70: Qual é a nota mais baixa?
+notas_exame2 = [90 / 100, 46 / 50, 55 / 60, 66 / 70]
+menor_nota = min(notas_exame2)
+porcentagem2 = menor_nota * 100
+
+print(f"{porcentagem2:.2f}%") # ? 90%
+
+# A soma dos números de 1 a 10.
+lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print(sum(lst)) # 55
+
+print(sum(range(1, 11))) # 55
+
+numeroInicial = 0
+for i in range(1, 11):
+    numeroInicial += i
+    
+print(numeroInicial) # 55
+
+# O produto dos números de 1 a 10.
+numeroInicial2 = 1
+for n in range(1, 11):
+    numeroInicial2 *= n
+    
+print(numeroInicial2)
+
+# Um Kb (kilobyte) é realmente 1.024 bytes, pois 1.024 é 2 elevado à potência 10.
+# Da mesma forma, um gigabyte (GB) é 2 elevado à potência 30, o que dá o número exato de bytes.
+
+# Calculando o número de bytes em um gigabyte (2**30):
+gigabyte = 2 ** 30  # 1 GB = 1.073.741.824 bytes
+
+# Exibindo o resultado
+print(gigabyte)  # Saída: 1073741824
