@@ -19,11 +19,44 @@ print(f(2))
 def <function name> (<0 or more variables>):
   <indented function body>
 """
-
 import math
 
 def hip(a, b):
     res = math.sqrt(a**2 + b**2)
     return res
 
-print(hip(3, 4))    
+print(hip(3, 4))
+
+# Escreva uma função chamada hello() que:
+# • Recebe um nome (uma string) como entrada
+# • Imprime uma mensagem de boas-vindas personalizada
+def hello(string):
+  return "Olá, " + string + ", boas-vindas ao mundo Python."
+
+print(hello('Nathan'))
+
+# Escreva uma função chamada rng() que:
+# • Recebe uma lista como parâmetro de entrada
+# • Retorna o intervalo dos números (isto é a maior diferença entre elementos da lista)
+def rng(list):
+  intervaloNumeros = max(list) - min(list)
+  return intervaloNumeros
+  
+print(rng([4, 0, 1, -2]))
+
+# Programas Python devem ser documentados
+# • Para manutenção do código
+# • Para uso do código
+
+"""  
+Comentários
+def f(x):
+res = x**2 + 10 #calcula o resultado
+return res #retorna resultado
+
+Docstring
+def f(x):
+'retorna x**2 + 10'
+res = x**2 + 10 #calcula o resultado
+return res #retorna resultado
+"""
