@@ -136,8 +136,12 @@ DEFININDO NOVAS FUNÇÕES
 ▪ A função não retorna nada 
 """
 
-def swapFS(x):
-    return x
-    
-mylst = ['one', 'two', 'three']
-print(swapFS(mylst))
+def swapFS(y):
+    if len(y) >= 2:
+        y[0], y[1] = y[1], y[0] # efetua o swap 
+        return y
+    return False
+        
+myY = ['one', 'two', 'three']
+print(myY)
+print(swapFS(myY))
