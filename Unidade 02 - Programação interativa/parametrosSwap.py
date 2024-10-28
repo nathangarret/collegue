@@ -145,3 +145,19 @@ def swapFS(y):
 myY = ['one', 'two', 'three']
 print(myY)
 print(swapFS(myY))
+
+def swapTwo(z):
+    z[0], z[1] = z[1], z[0]
+    return z
+xz = ['1', '3', '5', '7']
+print(xz)
+print(swapTwo(xz))
+
+i = 2
+j = 4
+print(i, j)
+
+tmp = j
+j = i
+i = tmp
+print(i, j)
