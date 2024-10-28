@@ -1,0 +1,14 @@
+Explicação do Código
+Definição da Função: def intersect(list1, list2): define a função e recebe duas listas.
+
+Criação de um Conjunto: set_list2 = set(list2) transforma a segunda lista em um conjunto, o que facilita e acelera a busca por elementos. A verificação de pertencimento em um conjunto (item in set_list2) é mais rápida do que em uma lista.
+
+Loop sobre list1: O loop for item in list1: itera por cada item na primeira lista.
+
+Verificação de Presença: O if item in set_list2: verifica se o item da primeira lista está na segunda.
+
+Adicionando Elementos: if item not in result: garante que apenas itens únicos sejam adicionados à lista de resultados.
+
+Ordenação: result.sort() ordena a lista resultante antes de retorná-la.
+
+Retorno da Lista: A função retorna a lista ordenada de elementos comuns.
