@@ -1,0 +1,29 @@
+Exercício 1
+Considere que a variável info contenha a seguinte lista: ['Curso', 'Python'
+Escreva comandos Python que:
+(a) Acrescenta a string ‘introdução' na lista armazenada em info
+(b) Acrescenta a string 'de'
+(c) Acrescenta a string 'a'
+(d) Mude a ordem dos elementos na lista tal que a lista final seja ['Curso', 'de', 'introdução', 'a', 'Python'
+
+Exercício 2
+Escreva uma função chamada buscaContatos() que recebe como entradas uma lista, lst (que contém nomes), e uma string contendo uma letra, inicial, e imprime os elementos da lista (nomes) que começam com a letra inicial
+Por exemplo:
+>>> buscaContatos(['Igraine', 'Arthur', 'Gorlois', 'Uther', 'Guenevere'], 'G')
+Gorlois
+Guenever
+
+Exercício 3
+Escreva uma função chamada buscarLinhas(), que recebe como parâmetros: o nome do arquivo de entrada (nomeArq) e uma palavra a ser buscada (palavra).
+
+Sua função deve escrever um arquivo chamado resultado.txt que contém as linhas do arquivo original que contêm a palavra, como no exemplo a seguir:
+>>> buscarLinhas('exemplo.txt', 'exemplo')
+
+exemplo.txt
+Um exemplo de arquivo de
+Para o exercício de exemplo
+Vamos ver a resposta cert
+
+resultado.txt
+Um exemplo de arquivo de
+Para o exercício de exemplo
