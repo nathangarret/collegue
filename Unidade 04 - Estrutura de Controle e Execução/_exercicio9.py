@@ -4,8 +4,15 @@ Escreva uma função chamada pairs() que toma como entrada duas listas de mesmo 
 [(x1, y1), (x1, y1), (x2, y2), ... , (xn, yn )].
 Como exemplo de execução:
 
->>> pairs([2,3,4], [1,0,2])
+>>> pairs([2,3,4], 
+        [1,0,2])
 [(2, 1), (3, 0), (4, 2)]
 """
 
-# def pairs(x, y):
+def pairs(x, y):
+    if len(x) != len(y):
+        return []
+
+    return list(zip(x, y))  # A função é útil para criar pares de elementos de várias iteráveis
+
+print(pairs([2,3,4], [1,0,2])) # [(2, 1), (3, 0), (4, 2)]

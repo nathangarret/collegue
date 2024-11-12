@@ -15,3 +15,23 @@ Como exemplos de execução:
 >>> approxPIsquared(0.00000001)
 9.869462988376474
 """
+
+def approxPIsquared(error):
+
+    soma_anterior = 0
+    soma_atual = 0
+    n = 1 # contador
+    termo = 0
+
+    while True:
+        termo = 8 * (1 / n) **2
+        soma_atual += termo
+
+        if abs(soma_atual - soma_anterior) < error:
+            return soma_atual
+        
+        soma_anterior = soma_atual
+        n += 2
+
+print(approxPIsquared(0.0001))
+print(approxPIsquared(0.00000001))
