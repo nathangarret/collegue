@@ -15,16 +15,16 @@ Realize as saídas como acima. Note que espaços, pontuação, etc. são tratado
 
 def cripto(s):
 
-    criptograda = ""
+    criptografada = ""
 
     # Divididno a string em blocos de 2 caracteres e trocando os pares
     for i in range(0, len(s), 2): # s[0:2]
         # Houver o par completo troque as letras
         if i + 1 < len(s): 
-            criptograda += s[i + 1] + s[i]
+            criptografada += s[i + 1] + s[i]
         else:
-            criptograda += s[i]
-    return criptograda
+            criptografada += s[i]
+    return criptografada
 
 print(cripto('Secret Message'))   # 'eSrcteM seaseg'
 print(cripto('Secret Messages'))  # 'eSrcteM seasegs'
