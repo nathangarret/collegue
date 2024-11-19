@@ -16,7 +16,6 @@ def choose_door(stage):
       print("Invalid choice. Please enter 1, 2, or 3.")
       return choose_door(stage) # recursively call function until valid input is entered
 
-
     if stage == 3:
         winning_door = random.randint(1, 3)
         if choice == winning_door:

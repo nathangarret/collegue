@@ -1,7 +1,7 @@
 # Pedra Papel e Tesoura
 
 # Vamos implementar um jogo de pedra papel e tesoura onde o usuário joga contra o computador:
-# • Em cada jogada, o jogar escolhe sua opção
+# • Em cada jogada, o jogador escolhe sua opção
 # • O sistema avalia o resultado da jogada escolhida com a jogada do computador e mostra o resultado
 # • O jogo é repetido até o jogador digitar sair
 # • Ao final, o placar final deve ser exibido

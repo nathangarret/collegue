@@ -1,7 +1,6 @@
 # Conjuntos 
 
-# • A classe set implementa um objeto com as propriedades de um 
-# conjunto matemático
+# • A classe set implementa um objeto com as propriedades de um conjunto matemático
 # • Coleção não ordenada de objetos
 # • Todos os membros devem ser objetos imutáveis
 
@@ -33,7 +32,7 @@ print(list(set(idades)))
  
 # s < t True se s <= t e s != t
  
-# s | t Retorna a união dos conjuntos s et
+# s | t Retorna a união dos conjuntos s e t
 
 # s & t Retorna a interseção dos conjuntos s e t
  

@@ -1,8 +1,7 @@
 # Codificação de Strings
 
-# Um objeto string (str) contém uma sequência ordenada de 
-# caracteres que pode ser qualquer um dos seguintes:
-# • Letras maiúsculas e minúsculas (alfabeto latino): 
+# Um objeto string (str) contém uma sequência ordenada de caracteres que pode ser qualquer um dos seguintes:
+# • Letras maiúsculas e minúsculas (alfabeto latino):
 # a b c … z e A B C … Z
 # • Dígitos decimais: 0 1 2 3 4 5 6 7 8 9
 # • Pontuações: , . : ; ‘ “ ! ? etc.
@@ -16,14 +15,14 @@
 
 # ASCII
 
-print(ord('a')) # ord - recebe o caractere e retorna seu código ASCII
+print(ord('?')) # ord - recebe o caractere e retorna seu código ASCII
 print(chr(97)) # chr - recebe o código ASCII e retorna o caracter
 
 # Unicode transformation formaat - UTF
 # • No Unicode, todo caractere é representado por um inteiro chamado ponto de código. 
 # • O ponto de código não é necessariamente a representação de bytes do caractere; é somente um identicador do caractere
 # • O ponto de código para a letra a é o inteiro cuja representação é o inteiro com valor hexadecimal 0x0061
-# • Para caracteres ASCII, o Unicode convenientemente usa o ponto de códigoigual ao código ASCII
+# • Para caracteres ASCII, o Unicode convenientemente usa o ponto de código igual ao código ASCII
 
 print('\u0061')
 print('\u0064\u0061d')

@@ -23,11 +23,10 @@ print(dias[2])
 
 # Suponhamos que queiramos definir uma "caixa de contatos" com um dicionário
 agenda = {
-    ('Anna','Karenina'):'(123)456-78-90', 
+    ('Anna','Karenina'):'(123)456-78-90',
     ('Yu', 'Tsun'):'(901)234-56-78', 
     ('Hans','Castorp'):'(321)908-76-54'
-} 
-
+}
 print(agenda)
 
 def lookup():
