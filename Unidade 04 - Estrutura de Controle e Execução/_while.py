@@ -3,7 +3,6 @@
 
 num = 7
 
-
 while num <= 49:
     num+=7
 
