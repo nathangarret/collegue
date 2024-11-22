@@ -1,56 +1,59 @@
-# Módulos como namespaces
-# • Um módulo é um arquivo contendo código Python
-# • Este namespace temo mesmo nome do módulo
-# • Neste namespace, estão armazenados todos os nomes no escopo global do módulo: os nomes de funções, valores e classes definidos no módulo
-# • Estes nomessão os atributos do módulo
+# Modulos como namespaces
 
+# 1. O que são Módulos e Namespaces?
+# Um módulo em Python é simplesmente um arquivo contendo código Python. Quando você importa um módulo, ele cria um namespace: um espaço isolado onde os nomes (variáveis, funções, classes) definidos dentro do módulo são armazenados. Isso evita conflitos de nomes: você pode ter uma função calcular() no módulo matematica e outra função calcular() no módulo finanças, sem que uma interfira na outra.
+
+# import math: Importa o módulo math. Os nomes dentro de math (como sqrt, pi, sin, etc.) ficam acessíveis através de math.nome.
 import math
-print(dir(math)) # A função dir() retorna os nomes definidos em um namespace
 
-print(math.sqrt) # <built-in function sqrt>
-print(math.pi) # 3.141592
+raiz_quadrada = math.sqrt(16)
+print(raiz_quadrada)
 
-# Quando o interpretador Python executa um comando import ele:
-# 1.Procura o arquivo correspondente ao módulo a ser importado
-# 2.Roda o código do módulo para criar os objetos definidos nele
-# 3.Cria o namespace onde esses objetos serão armazenados O comando import somente recebe um nome, o nome dó modulo
-#   • Sem informações do diretório ou extensão O Caminho de Busca para localizar o módulo
-#   • O Caminho de busca é a lista de diretórios onde o interpretador procurar por módulos
-#   • A variável path definida no módulo da bibliotheca padrão sys aponta para essa lista
+valor_pi = math.pi
+print(valor_pi)
 
+# dir(math): Lista todos os nomes (atributos) disponíveis dentro do namespace math.
+print(dir(math))
+
+# Importando o módulo -
 import sys
 
-print(sys.path) # Diretório Corrente - Pastas da Biblioteca padrão
+print(sys.path)
+# Quando você usa import modulo, Python procura pelo arquivo modulo.py em uma lista de diretórios chamada "caminho de busca". A variável sys.path contém esse caminho.
 
-# Caminho de busca do módulo:
-#   • Ao adicionar/Users/me ao caminho de busca, o módulo example pode ser importado
+# Se o módulo não for encontrado no caminho de busca, você recebe um ImportError. Você pode adicionar diretórios ao sys.path:
+# Suponha que 'meu_modulo.py' esteja em '/home/usuario/meus_modulos'
+sys.path.append('/home/usr/meus_modulos')
 
-# Suponha que desejamos importar o módulo example salvo na pasta /Users/me que não está na lista sys.path
+# import meu_modulo
 
-# dir() - Nomes no namespace do shell; note que example não está presente
+# Módulo de Alto Nível (__main__)
 
-# import example
-""" 
-Traceback (most recent call last):
-  File "/home/persistent/penguin/FGV/collegue/Unidade 06 - Namespaces e controle de fluxo excepcional/_modulosNamespaces.py", line 31, in <module>
-    import example
-ModuleNotFoundError: No module named 'example' 
-"""
+# __name__ - indica qual módulo está sendo executado - Todo programa Python tem um módulo principal. A variável especial __name__ indica qual módulo está sendo executado. Se o módulo for executado diretamente (não importado), __name__ será "__main__". Isso é útil para colocar código que só deve ser executado quando o arquivo é o programa principal, não quando importado como módulo.
 
-""" 
-sys.path.append('/Users/me')
+# file _modulosNamespaces.py
+def minha_funcao() -> str:
+    print("Executando minha função!")
 
-import example
-print(example.f)
-print(example.x)
+if __name__ == "__main__":
+    minha_funcao()
 
-print(dir()) 
-"""
+# Diferentes maneiras de importar um módulo
+# import modulo: Importa todo o módulo. Acessa os atributos com modulo.atributo.
+# from modulo import atributo1, atributo2: Importa atributos específicos. Usa-os diretamente pelo nome.
+# from modulo import *: Importa todos os atributos do módulo para o namespace atual. Cuidado: pode causar conflitos de nomes e dificultar a leitura do código. Geralmente, é melhor evitar essa forma.
 
-# Aplicações reais são organizadas em módulos:
-# Um módulo especial: o “programaprincipal” 
-# Este módulo é chamado de módulo de alto nível
+# In other file that import '_modulosNamespaces.py'
+# Forma 1
+import _modulosNamespaces
+_modulosNamespaces.minha_funcao()
 
-# • Os módulosrestantessão chamadosde módulos de “biblioteca” Quando módulossão importados, Python cria variáveis de “manutenção” no namespace do módulo, incluindo a variável __name__:
-# • Se o módulo é executado como de alto nível, __name__ = '__main__'
-print('My name is {}'.format(__name__))
+# Forma 2
+from _modulosNamespaces import minha_funcao
+minha_funcao()
+
+# Forma 3 - Menos recomendada
+from _modulosNamespaces import *
+minha_funcao()
+
+# Resumindo: módulos e namespaces são ferramentas essenciais para organizar código Python, evitar conflitos de nomes e reutilizar código de forma eficiente. Entender como funcionam é fundamental para escrever programas Python mais robustos e organizados.
