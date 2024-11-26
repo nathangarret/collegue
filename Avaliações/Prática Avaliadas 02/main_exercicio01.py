@@ -8,15 +8,15 @@
 2 
 """
 
-def diferente(tabela):
-    elementos_distintos = []
+def diferente(table):
+    elements_distincts = []
 
-    for linha in tabela: # 
-        for elemento in linha: # 
-            if elemento not in elementos_distintos:
-                elementos_distintos.append(elemento) # 
-    
-    return len(elementos_distintos) # Retornar a quantidade de elementos_distintos
+    for line in table:
+        for element in line:
+            if element not in elements_distincts:
+                elements_distincts.append(element)
+
+    return len(elements_distincts)
 
 s = [[1, 0, 1], [0, 1, 0]]
 t = [[32, 12, 52, 63], [32, 64, 67, 52], [64, 64, 17, 34],[34, 17, 76, 98]]

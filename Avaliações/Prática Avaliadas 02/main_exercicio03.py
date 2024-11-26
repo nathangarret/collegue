@@ -9,25 +9,22 @@
 {10: [1, 2, 5], 20: [1, 2, 4, 5, 10], 25: [1, 5], 12: [1, 2, 3, 4, 6]} 
 """
 
-import os
+import os as s
 
-linhas_com_palavras = {}
+def divisors():
+    in_folder = s.path.dirname(s.path.abspath(__file__))
+    in_file = s.path.join(in_folder, 'numeros.txt')
 
-def divisores():
-    
-    caminho_pasta = os.path.dirname(os.path.abspath(__file__))
-    caminho_arquivo = os.path.join(caminho_pasta, 'numeros.txt')
+    dic_divisors = {}
 
-    divisores_dict = {}
+    with open(in_file, 'r', encoding='utf-8') as file:
+        numbers = [int(line.strip()) for line in file.readlines()]
 
-    with open(caminho_arquivo, 'r', encoding='utf-8') as arquivo:
-        numeros = [int(linha.strip()) for linha in arquivo.readlines()]
-    
-    for numero in numeros:
-        divisores = [i for i in range(1, numero) if numero % i == 0]
-        divisores_dict[numero] = divisores
+    for number in numbers:
+        divisors = [i for i in range(1, number) if number % i == 0]
+        dic_divisors[number] = divisors
 
-    return divisores_dict
+    return dic_divisors
 
-resultado = divisores()
+resultado = divisors()
 print(resultado)
