@@ -9,22 +9,22 @@
 {10: [1, 2, 5], 20: [1, 2, 4, 5, 10], 25: [1, 5], 12: [1, 2, 3, 4, 6]} 
 """
 
-import os as s
+import os
 
-def divisors():
-    in_folder = s.path.dirname(s.path.abspath(__file__))
-    in_file = s.path.join(in_folder, 'numeros.txt')
+def divisores():
+    caminho_pasta = os.path.dirname(os.path.abspath(__file__))
+    caminho_arquivo = os.path.join(caminho_pasta, 'numeros.txt')
 
-    dic_divisors = {}
+    quantidade_divisores = {} # Chave e valor
 
-    with open(in_file, 'r', encoding='utf-8') as file:
-        numbers = [int(line.strip()) for line in file.readlines()]
+    with open(caminho_arquivo, 'r', encoding='utf-8') as arquivo:
+        numeros = [int(line.strip()) for line in arquivo.readlines()] # strip - remove quaisquer espaços em
+        
+    for numero in numeros:
+        divisor = [i for i in range(1, numero) if numero % i == 0]
+        quantidade_divisores[numero] = divisor
 
-    for number in numbers:
-        divisors = [i for i in range(1, number) if number % i == 0]
-        dic_divisors[number] = divisors
+    return quantidade_divisores
 
-    return dic_divisors
-
-resultado = divisors()
+resultado = divisores()
 print(resultado)
