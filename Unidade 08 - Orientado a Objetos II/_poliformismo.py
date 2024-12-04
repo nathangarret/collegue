@@ -75,3 +75,20 @@ print(gerente_1.horas_extras)  # Saída: 1.5
     # Flexibilidade: Subclasses podem implementar comportamentos específicos sem alterar a superclasse.
     # Reuso de Código: Métodos e atributos da superclasse são herdados automaticamente.
     # Extensibilidade: Novas funcionalidades podem ser adicionadas sem alterar o código existente.
+
+# Sobrescrever Métodos
+    # Classes podem sobrescrever métodos de suas superclasses para comportamentos específicos
+    # Exemplo: Classe (Animal) e subclasse (Bird):
+class Animal:
+    def __init__(self, especie, som) -> None:
+        self.especie = especie
+        self.som = som
+    def speak(self) -> str:
+        print(f"Eu sou um {self.especie} e faço {self.som}")
+
+class Bird(Animal):
+    def speak(self) -> str:
+        print(f"{self.som}! {self.som}! {self.som}!")
+
+tweety = Bird("canário", "pio")
+tweety.speak()

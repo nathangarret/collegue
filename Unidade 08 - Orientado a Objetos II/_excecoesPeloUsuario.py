@@ -59,3 +59,20 @@ except EmptyQueueError as e:
         # Esconde detalhes internos de implementação.
     # Reuso:
         # Exceções personalizadas podem ser usadas em diferentes partes de um sistema que compartilham lógica de domínio.
+
+# Problemas com o encapsulamento
+    # A classe Queue náo protoge contra remoção de itens de um fila vazia:
+
+queue = Queue()
+queue.dequeue() # gera IndexError
+
+# Soluções personalizadas
+    # Definir uma exceção EmptyQueueError
+class EmptyQueueError(Exception):
+    pass
+
+    # Modificar o método dequeue:
+def dequeue(self):
+    if self.isEmpty():
+        raise EmptyQueueError("Queue vazia! :(")
+    return self.q.pop(0)
